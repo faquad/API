@@ -1,7 +1,52 @@
 {
     "swagger": "2.0",
     "info": {
-        "title": "POC-API1",
-        "description": "v1"
+        "title": "description",
+        "description": "name: POC-API\nversion: 1.0\ndescription: play",
+        "version": "version"
+    },
+    "paths": {
+        "/users/v1": {
+            "get": {
+                "description": "list users",
+                "responses": {
+                    "200": {
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "type": "#/definitions/User"
+                            }
+                        }
+                    }
+                }
+            },
+            "parameters": [
+                {
+                    "name": "offset",
+                    "in": "query",
+                    "type": "integer"
+                },
+                {
+                    "name": "size",
+                    "in": "query",
+                    "type": "integer"
+                }
+            ]
+        }
+    },
+    "definitions": {
+        "User": {
+            "properties": {
+                "name": {
+                    "type": "string"
+                },
+                "id": {
+                    "type": "string"
+                },
+                "email": {
+                    "type": "string"
+                }
+            }
+        }
     }
 }
