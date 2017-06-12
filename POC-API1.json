@@ -1,14 +1,14 @@
 {
     "swagger": "2.0",
     "info": {
-        "title": "description",
+        "title": "POC-API-1.1",
         "description": "name: POC-API\nversion: 1.0\ndescription: play",
         "version": "version"
     },
     "paths": {
         "/users/v1": {
             "get": {
-                "description": "list users",
+                "description": "list users with offset and size",
                 "responses": {
                     "200": {
                         "schema": {
